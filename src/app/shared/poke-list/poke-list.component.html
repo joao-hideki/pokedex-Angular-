@@ -1,49 +1,18 @@
-<!-- <img src="assets/list-pokemon-background.svg" alt="" /> -->
-<a>
-  <section class="pokemon-status">
-    <h2>Pokemon Name</h2>
-    <ul>
-      <li>test</li>
-      <li>test</li>
-    </ul>
-  </section>
-  <section class="pokemon-image">
-    <img src="assets/test-pokemon.svg" alt="" />
-  </section>
-</a>
-<a>
-  <section class="pokemon-status">
-    <h2>Pokemon Name</h2>
-    <ul>
-      <li>test</li>
-      <li>test</li>
-    </ul>
-  </section>
-  <section class="pokemon-image">
-    <img src="assets/test-pokemon.svg" alt="" />
-  </section>
-</a>
-<a>
-  <section class="pokemon-status">
-    <h2>Pokemon Name</h2>
-    <ul>
-      <li>test</li>
-      <li>test</li>
-    </ul>
-  </section>
-  <section class="pokemon-image">
-    <img src="assets/test-pokemon.svg" alt="" />
-  </section>
-</a>
-<a>
-  <section class="pokemon-status">
-    <h2>Pokemon Name</h2>
-    <ul>
-      <li>test</li>
-      <li>test</li>
-    </ul>
-  </section>
-  <section class="pokemon-image">
-    <img src="assets/test-pokemon.svg" alt="" />
-  </section>
-</a>
+<ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
+  <a *ngIf="pokemon.status">
+    <section class="pokemon-status">
+      <h2>{{ pokemon.name }}</h2>
+      <ul>
+        <li *ngFor="let value of pokemon.status.types">
+          {{ value.type.name }}
+        </li>
+      </ul>
+    </section>
+    <section class="pokemon-image">
+      <img
+        [src]="pokemon.status.sprites.other.dream_world.front_default"
+        [alt]="pokemon.name"
+      />
+    </section>
+  </a>
+</ng-template>

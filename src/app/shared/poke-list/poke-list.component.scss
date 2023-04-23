@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
   margin: rem-calc(20) 0;
 
   a {
@@ -14,6 +13,7 @@
     padding: rem-calc(20);
     height: rem-calc(157);
     position: relative;
+    margin-bottom: 10px;
 
     section.pokemon-status {
       h2 {
@@ -21,6 +21,7 @@
         font-style: italic;
         font-weight: 700;
         margin-bottom: rem-calc(10);
+        text-transform: capitalize;
       }
 
       ul {
@@ -36,6 +37,7 @@
           border-radius: 50px;
           width: rem-calc(60);
           padding: rem-calc(3) rem-calc(14);
+          text-transform: capitalize;
 
           & + li {
             margin-top: rem-calc(5);
