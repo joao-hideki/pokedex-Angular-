@@ -1,4 +1,4 @@
-<app-poke-search></app-poke-search>
+<app-poke-search (emitSearch)="getSearch($event)"></app-poke-search>
 <div>
   <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
     <a *ngIf="pokemon.status" [routerLink]="['details', pokemon.status.id]">
