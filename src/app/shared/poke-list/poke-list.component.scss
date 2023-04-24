@@ -14,6 +14,8 @@
     height: rem-calc(157);
     position: relative;
     margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--primary-color);
 
     section.pokemon-status {
       h2 {
